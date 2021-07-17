@@ -13,7 +13,7 @@
 import AppPost from '@/components/main/Post'
 export default {
   head: {
-    title: 'Главная'
+    title: 'nuxt-blog Главная'
   },
   components: {
     AppPost
