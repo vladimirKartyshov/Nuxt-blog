@@ -36,7 +36,12 @@
     </main>
 
     <footer style='color: brown'>
-      //Footer will be content
+      //FORM
+
+      <div class='comments' v-if='true'>
+
+      </div>
+      <div class='text-center' v-else>No Comments</div>
     </footer>
   </article>
 </template>
