@@ -35,7 +35,7 @@
         deleniti, eius eos harum incidunt nobis pariatur quod suscipit voluptatum!</p>
     </main>
 
-    <footer>
+    <footer style='color: brown'>
       //Footer will be content
     </footer>
   </article>
@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: '_id',
+  name: 'Id',
   validate({params}) {
     return Boolean(params.id)
   }

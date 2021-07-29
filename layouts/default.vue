@@ -6,14 +6,14 @@
     <el-main>
       <nuxt/>
     </el-main>
-    <el-footer>Footer Side El-Ui</el-footer>
+    <el-footer style='color: aqua'>Footer Side El-Ui</el-footer>
   </el-container>
 </template>
 
 <script>
 import AppNavigation from '@/components/main/Navigation'
 export default {
-  name: 'default',
+  name: 'Default',
   components: {
     AppNavigation
   }
