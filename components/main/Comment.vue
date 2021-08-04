@@ -2,10 +2,10 @@
   <el-card class='comment'>
     <div class='comment-header'>
       <span>Person name</span>
-      <span>
+      <small>
          <i class='el-icon-pie-chart'></i>
           {{ new Date().toLocaleString() }}
-      </span>
+      </small>
     </div>
 
     <div class='comment-text'>
@@ -16,7 +16,8 @@
 
 <script>
 export default {
-  name: 'Comment'
+  name: 'Comment',
+  props: ['comment']
 }
 </script>
 
@@ -29,6 +30,7 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .comment-text {
