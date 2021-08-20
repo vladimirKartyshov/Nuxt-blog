@@ -35,8 +35,9 @@
         deleniti, eius eos harum incidunt nobis pariatur quod suscipit voluptatum!</p>
     </main>
 
-    <footer style='color: brown'>
-      //FORM
+    <footer>
+
+      <app-comment-form/>
 
       <div class='comments' v-if='true'>
         <app-comment
@@ -52,13 +53,15 @@
 
 <script>
 import AppComment from '@/components/main/Comment'
+import AppCommentForm from '@/components/main/CommentForm'
 export default {
   name: 'Id',
   validate({params}) {
     return Boolean(params.id)
   },
   components: {
-    AppComment
+    AppComment,
+    AppCommentForm
   }
 }
 </script>
