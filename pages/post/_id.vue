@@ -39,14 +39,14 @@
 
       <app-comment-form/>
 
-      <div class='comments' v-if='true'>
+      <div v-if='true' class='comments'>
         <app-comment
           v-for='comment in 4'
           :key='comment'
           :comment='comment'
         />
       </div>
-      <div class='text-center' v-else>Comments are not here</div>
+      <div v-else class='text-center'>Комментариев нет</div>
     </footer>
   </article>
 </template>
@@ -56,12 +56,12 @@ import AppComment from '@/components/main/Comment'
 import AppCommentForm from '@/components/main/CommentForm'
 export default {
   name: 'Id',
-  validate({params}) {
-    return Boolean(params.id)
-  },
   components: {
     AppComment,
     AppCommentForm
+  },
+  validate({params}) {
+    return Boolean(params.id)
   }
 }
 </script>
