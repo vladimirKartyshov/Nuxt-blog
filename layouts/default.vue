@@ -6,7 +6,7 @@
     <el-main>
       <nuxt/>
     </el-main>
-    <el-footer style='color: aqua'>Footer Side El-Ui</el-footer>
+    <el-footer style='color: brown'>Footer Side El-Ui</el-footer>
   </el-container>
 </template>
 
