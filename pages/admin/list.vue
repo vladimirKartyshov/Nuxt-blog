@@ -5,7 +5,8 @@
 <script>
 export default {
   name: 'List',
-  layout: 'admin'
+  layout: 'admin',
+  middleware: ['admin-auth']
 }
 </script>
 
