@@ -60,7 +60,22 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log('submit')
+      this.$refs.form.validate(valid => {
+        if (valid) {
+          this.loading = true
+
+          try {
+            const formData = {
+              login: this.controls.login,
+              password: this.controls.password
+            }
+            this.$store.dispatch('auth/login',formData)
+          }catch (e) {
+            this.loading = false
+
+          }
+        }
+      })
     }
   }
 }
