@@ -60,9 +60,16 @@ export default {
   },
   mounted() {
     const {message} = this.$route.query
-    if (message === 'login') {
-      this.$message.info('Войдите сначало в систему')
+
+    switch (message) {
+      case 'login':
+        this.$message.info('Войдите сначало в систему')
+        break
+      case 'logout':
+        this.$message.success('Вы успешно вышли из системы')
+        break
     }
+
   },
   methods: {
     onSubmit() {
@@ -79,7 +86,6 @@ export default {
             this.$router.push('/admin')
           }catch (e) {
             this.loading = false
-
           }
         }
       })

@@ -1,12 +1,16 @@
 <template>
-<div>logout</div>
+<div>Очищаем данные</div>
 </template>
 
 <script>
 export default {
   name: 'Logout',
   layout: 'admin',
-  middleware: ['admin-auth']
+  middleware: ['admin-auth'],
+  beforeCreate() {
+    this.$store.dispatch('auth/logout')
+    this.$router.push('/admin/login?message=logout')
+  }
 }
 </script>
 
