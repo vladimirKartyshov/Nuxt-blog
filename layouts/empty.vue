@@ -4,11 +4,23 @@
   </div>
 </template>
 
+
 <script>
 export default {
-  name: 'Empty'
+  name: 'Empty',
+  computed: {
+    error() {
+      return this.$store.getters.error
+    }
+  },
+  watch: {
+    error(value) {
+      this.$message.error(value)
+    }
+  }
 }
 </script>
+
 
 <style scoped>
 .empty-layout {
