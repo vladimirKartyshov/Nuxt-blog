@@ -16,7 +16,9 @@ import AppAside from '@/components/admin/Aside'
 
 export default {
   name: 'Admin',
-  components: {AppAside}
+  components: {
+    AppAside
+  }
 }
 </script>
 
