@@ -1,3 +1,5 @@
+Блог на Nuxt, Mongodb, El Ui, Heroku
+
 # nuxt-blog
 
 ## Build Setup
