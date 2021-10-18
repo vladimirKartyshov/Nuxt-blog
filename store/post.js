@@ -1,4 +1,3 @@
-import _id from '~/pages/post/_id'
 
 export const actions = {
   async fetchAdmin( {} ) {
@@ -12,5 +11,8 @@ export const actions = {
         ])
       }, 1000)
     })
+  },
+  async remove({}, id) {
+
   }
 }

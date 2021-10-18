@@ -17,6 +17,9 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
+
+  loading: {color: '#409EFF'},
+
   css: [
     'element-ui/lib/theme-chalk/index.css',
     '@/theme/index.css'
