@@ -22,6 +22,19 @@
         />
       </el-form-item>
 
+      <div class='mb'>
+        <small class='mr'>
+          <i class="el-icon-time"></i>
+          <span>
+            {{ new Date(post.date).toLocaleString() }}
+          </span>
+        </small>
+        <small>
+          <i class="el-icon-view"></i>
+          <span>{{ post.views }}</span>
+        </small>
+      </div>
+
       <el-form-item>
         <el-button
           type="primary"
@@ -41,10 +54,19 @@ export default {
   name: 'Id',
   layout: 'admin',
   middleware: ['admin-auth'],
+  head() {
+    return {
+      title: `Post | ${this.post.title}`
+    }
+  },
+  validate({params}) {
+    return Boolean(params.id)
+  },
   async asyncData({store, params}) {
     const post = await store.dispatch('post/fetchAdminById', params.id)
     return {post}
   },
+
   data() {
     return {
       loading: false,
@@ -58,11 +80,24 @@ export default {
       }
     }
   },
+
   methods: {
    onSubmit() {
-     this.$refs.form.validate(valid => {
+     this.$refs.form.validate(async valid => {
        if (valid) {
          this.loading = true
+
+         const formData = {
+           text: this.controls.text,
+           id: this.post._id
+         }
+         try {
+          await this.$store.dispatch('post/update', formData)
+           this.$message.success('Post has been upgraded')
+           this.loading = false
+         }catch (e) {
+           this.loading = false
+         }
        }
      })
    }
@@ -73,5 +108,8 @@ export default {
 <style scoped>
 .page-wrap {
   width: 600px;
+}
+.mr {
+  margin-right: 2rem;
 }
 </style>

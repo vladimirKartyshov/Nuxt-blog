@@ -14,6 +14,9 @@ export const actions = {
   async remove({}, id) {
 
   },
+  async update ({}, {id, text}) {
+
+  },
   async fetchAdminById({}, id) {
     return await new Promise(resolve => {
       setTimeout( () => {
