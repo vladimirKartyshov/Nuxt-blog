@@ -12,10 +12,15 @@ export const actions = {
     })
   },
   async remove({}, id) {
-
   },
   async update ({}, {id, text}) {
-
+  },
+  async create({}, {title, text}) {
+    return await new Promise(resolve => {
+      setTimeout( () => {
+        resolve()
+      }, 1000)
+    })
   },
   async fetchAdminById({}, id) {
     return await new Promise(resolve => {
