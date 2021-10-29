@@ -1,4 +1,4 @@
-Блог на Nuxt, Mongodb, Express, El Ui, Heroku.
+Персональный блог на NuxtJS, Mongodb, ExpressJS, El-Ui, Heroku.
 
 # nuxt-blog
 
