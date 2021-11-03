@@ -16,8 +16,8 @@
 
     <el-form-item label="Текст в формате.md или .html" prop="text">
       <el-input
-        type='textarea'
         v-model="controls.text"
+        type='textarea'
         resize='none'
         :rows='10'
       />
@@ -28,7 +28,9 @@
     </el-button>
 
     <el-dialog title="Предпросмотр" :visible.sync="previewDialog">
-      {{controls.text}}
+      <div :key='controls.text'>
+        <vue-markdown>{{controls.text}}</vue-markdown>
+      </div>
     </el-dialog>
 
     <el-form-item>
