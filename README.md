@@ -1,4 +1,4 @@
-Персональный блог с регистрацией, авторизацией, добавлением постов на NuxtJS, Mongodb, ExpressJS, El-Ui, Heroku.
+Персональный блог с регистрацией, авторизацией, добавлением постов используется NuxtJS, Mongodb, ExpressJS, El-Ui, Heroku.
 
 # nuxt-blog
 
